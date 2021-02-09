@@ -19,28 +19,4 @@ describe('<RomanConcerter />', () => {
             getByText("Roman: none")
         }).not.toThrow();
     });
-
-    it('converts 1 to I', () => {
-        const { getByText, getByLabelText } = render(<RomanConverter />);
-        fireEvent.change(getByLabelText(/arabic/i), { target: { value: '1'}});
-        expect(() => {
-            getByText("Roman: I")
-        }).not.toThrow();
-    });
-
-    it('converts 5 to V', () => {
-        const { getByText, getByLabelText } = render(<RomanConverter />);
-        fireEvent.change(getByLabelText(/arabic/i), { target: { value: '5'}});
-        expect(() => {
-            getByText("Roman: V")
-        }).not.toThrow();
-    });
-
-    it('does not converts 0 to any number', () => {
-        const { getByText, getByLabelText } = render(<RomanConverter />);
-        fireEvent.change(getByLabelText(/arabic/i), { target: { value: '0'}});
-        expect(() => {
-            getByText("Roman: none")
-        }).not.toThrow();
-    });
 })
