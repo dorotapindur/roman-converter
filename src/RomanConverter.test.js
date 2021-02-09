@@ -19,4 +19,22 @@ describe('<RomanConcerter />', () => {
             getByText("Roman: none")
         }).not.toThrow();
     });
+
+    it('converts 1 to I', () => {
+        const { getByText, getByLabelText } = render(<RomanConverter />);
+        fireEvent.change(getByLabelText(/arabic/i), { target: { value: '1'}});
+        expect(() => {
+            getByText("Roman: I")
+        }).not.toThrow();
+    });
+
+    it.skip('converts 2019 to MMXIX', () => {
+        const { getByText, getByLabelText } = render(<RomanConverter />);
+        fireEvent.change(getByLabelText(/arabic/i), { target: { value: '2019'}});
+        expect(() => {
+            getByText("Roman: MMXIX")
+        }).not.toThrow();
+    });
+
+
 })

@@ -1,12 +1,11 @@
 import toRoman from './toRoman';
 
 describe('toRoman()', () => {
-    it('converts 1 to I', () => {
-        expect(toRoman(1)).toEqual('I')
-    });
-
-    it('converts 5 to V', () => {
-        expect(toRoman(5)).toEqual('V')
+    it.each([
+        [1, 'I'],
+        [5, 'V'],
+    ])('converts %d to %s', (arabic, expectedRoman) => {
+        expect(toRoman(arabic)).toEqual(expectedRoman)
     });
 
     it('does not converts 0 to any number', () => {
