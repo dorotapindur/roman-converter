@@ -14,7 +14,7 @@ class RomanConverter extends React.Component {
         return (
             <>
             <label>Arabic:<input onChange={this.handleChange} type="number"></input></label>
-            <h1>Roman: {this.state.roman ? this.state.roman : 'none'}</h1>
+            <p>Roman: {this.state.roman ? this.state.roman : 'none'}</p>
             </>
         )
     }
