@@ -7,6 +7,8 @@ function toRoman(arabic) {
 
     if (arabic <= 0) {
         roman = 'none';
+    } else if (arabic > 10000) {
+        roman = `${arabic} is too high for me!`;
     } else {
    
         if (arabic == 1) {
@@ -92,7 +94,39 @@ function toRoman(arabic) {
         if (arabic == 900) {
             romanHundreds = 'CM'
         }
-        roman = romanHundreds + romanTens + romanSingle;
+
+        if (arabic == 1000) {
+            romanThousands = 'M'
+        }
+        if (arabic == 2000) {
+            romanThousands = 'MM'
+        }
+        if (arabic == 3000) {
+            romanThousands = 'MMM'
+        }
+        if (arabic == 4000) {
+            romanThousands = '|XL|'
+        }
+        if (arabic == 5000) {
+            romanThousands = '|L|'
+        }
+        if (arabic == 6000) {
+            romanThousands = '|LX|'
+        }
+        if (arabic == 7000) {
+            romanThousands = '|LXX|'
+        }
+        if (arabic == 8000) {
+            romanThousands = '|LXXX|'
+        }
+        if (arabic == 9000) {
+            romanThousands = '|XC|'
+        }
+        if (arabic == 10000) {
+            romanThousands = '|C|'
+        }
+
+        roman = romanThousands + romanHundreds + romanTens + romanSingle;
     }
 
     return roman;
