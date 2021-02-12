@@ -2,6 +2,7 @@ function toRoman(arabic) {
     let roman;
     let romanSingle = '';
     let romanTens = '';
+    let romanHundreds = '';
 
     if (arabic <= 0) {
         roman = 'none';
@@ -62,7 +63,35 @@ function toRoman(arabic) {
         if (arabic == 90) {
             romanTens = 'XC'
         }
-        roman = romanTens + romanSingle;
+
+        if (arabic == 100) {
+            romanTens = 'C'
+        }
+        if (arabic == 200) {
+            romanTens = 'CC'
+        }
+        if (arabic == 300) {
+            romanTens = 'CCC'
+        }
+        if (arabic == 400) {
+            romanTens = 'CD'
+        }
+        if (arabic == 500) {
+            romanTens = 'D'
+        }
+        if (arabic == 600) {
+            romanTens = 'DC'
+        }
+        if (arabic == 700) {
+            romanTens = 'DCC'
+        }
+        if (arabic == 800) {
+            romanTens = 'DCCC'
+        }
+        if (arabic == 900) {
+            romanTens = 'CM'
+        }
+        roman = romanHundreds + romanTens + romanSingle;
     }
 
     return roman;

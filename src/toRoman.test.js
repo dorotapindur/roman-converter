@@ -29,7 +29,22 @@ describe('toRoman()', () => {
         expect(toRoman(arabic)).toEqual(expectedRoman)
     });
 
+    it.each([
+        [100, 'C'],
+        [200, 'CC'],
+        [300, 'CCC'],
+        [400, 'CD'],
+        [500, 'D'],
+        [600, 'DC'],
+        [700, 'DCC'],
+        [800, 'DCCC'],
+        [900, 'CM']
+    ])('converts %d to %s', (arabic, expectedRoman) => {
+        expect(toRoman(arabic)).toEqual(expectedRoman)
+    });
+
     it('does not converts 0 to any number', () => {
         expect(toRoman(0)).toEqual('none')
     });
+
 })
