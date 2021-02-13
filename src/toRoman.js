@@ -1,3 +1,5 @@
+import { arabicSingle, arabicTens, arabicHundreds, arabicThousands }  from './arabicDigits.js';
+
 function toRoman(arabic) {
     let roman;
     let romanSingle = '';
@@ -10,119 +12,119 @@ function toRoman(arabic) {
     } else if (arabic > 10000) {
         roman = `${arabic} is too high for me!`;
     } else {
-   
-        if (arabic == 1) {
+        //singles
+        if (arabicSingle(arabic) == 1) {
             romanSingle = 'I'
         }
-        if (arabic == 2) {
+        if (arabicSingle(arabic) == 2) {
             romanSingle = 'II'
         }
-        if (arabic == 3) {
+        if (arabicSingle(arabic) == 3) {
             romanSingle = 'III'
         }
-        if (arabic == 4) {
+        if (arabicSingle(arabic) == 4) {
             romanSingle = 'IV'
         }
-        if (arabic == 5) {
+        if (arabicSingle(arabic) == 5) {
             romanSingle = 'V'
         }
-        if (arabic == 6) {
+        if (arabicSingle(arabic) == 6) {
             romanSingle = 'VI'
         }
-        if (arabic == 7) {
+        if (arabicSingle(arabic) == 7) {
             romanSingle = 'VII'
         }
-        if (arabic == 8) {
+        if (arabicSingle(arabic) == 8) {
             romanSingle = 'VIII'
         }
-        if (arabic == 9) {
+        if (arabicSingle(arabic) == 9) {
             romanSingle = 'IX'
         }
-
-        if (arabic == 10) {
+        //tens
+        if (arabicTens(arabic) == 1) {
             romanTens = 'X'
         }
-        if (arabic == 20) {
+        if (arabicTens(arabic) == 2) {
             romanTens = 'XX'
         }
-        if (arabic == 30) {
+        if (arabicTens(arabic) == 3) {
             romanTens = 'XXX'
         }
-        if (arabic == 40) {
+        if (arabicTens(arabic) == 4) {
             romanTens = 'XL'
         }
-        if (arabic == 50) {
+        if (arabicTens(arabic) == 5) {
             romanTens = 'L'
         }
-        if (arabic == 60) {
+        if (arabicTens(arabic) == 6) {
             romanTens = 'LX'
         }
-        if (arabic == 70) {
+        if (arabicTens(arabic) == 7) {
             romanTens = 'LXX'
         }
-        if (arabic == 80) {
+        if (arabicTens(arabic) == 8) {
             romanTens = 'LXXX'
         }
-        if (arabic == 90) {
+        if (arabicTens(arabic) == 9) {
             romanTens = 'XC'
         }
-
-        if (arabic == 100) {
+        //hundreds
+        if (arabicHundreds(arabic) == 1) {
             romanHundreds = 'C'
         }
-        if (arabic == 200) {
+        if (arabicHundreds(arabic) == 2) {
             romanHundreds = 'CC'
         }
-        if (arabic == 300) {
+        if (arabicHundreds(arabic) == 3) {
             romanHundreds = 'CCC'
         }
-        if (arabic == 400) {
+        if (arabicHundreds(arabic) == 4) {
             romanHundreds = 'CD'
         }
-        if (arabic == 500) {
+        if (arabicHundreds(arabic) == 5) {
             romanHundreds = 'D'
         }
-        if (arabic == 600) {
+        if (arabicHundreds(arabic) == 6) {
             romanHundreds = 'DC'
         }
-        if (arabic == 700) {
+        if (arabicHundreds(arabic) == 7) {
             romanHundreds = 'DCC'
         }
-        if (arabic == 800) {
+        if (arabicHundreds(arabic) == 8) {
             romanHundreds = 'DCCC'
         }
-        if (arabic == 900) {
+        if (arabicHundreds(arabic) == 9) {
             romanHundreds = 'CM'
         }
 
-        if (arabic == 1000) {
+        if (arabicThousands(arabic) == 1) {
             romanThousands = 'M'
         }
-        if (arabic == 2000) {
+        if (arabicThousands(arabic) == 2) {
             romanThousands = 'MM'
         }
-        if (arabic == 3000) {
+        if (arabicThousands(arabic) == 3) {
             romanThousands = 'MMM'
         }
-        if (arabic == 4000) {
+        if (arabicThousands(arabic) == 4) {
             romanThousands = '|XL|'
         }
-        if (arabic == 5000) {
+        if (arabicThousands(arabic) == 5) {
             romanThousands = '|L|'
         }
-        if (arabic == 6000) {
+        if (arabicThousands(arabic) == 6) {
             romanThousands = '|LX|'
         }
-        if (arabic == 7000) {
+        if (arabicThousands(arabic) == 7) {
             romanThousands = '|LXX|'
         }
-        if (arabic == 8000) {
+        if (arabicThousands(arabic) == 8) {
             romanThousands = '|LXXX|'
         }
-        if (arabic == 9000) {
+        if (arabicThousands(arabic) == 9) {
             romanThousands = '|XC|'
         }
-        if (arabic == 10000) {
+        if (arabicThousands(arabic) == 10) {
             romanThousands = '|C|'
         }
 
