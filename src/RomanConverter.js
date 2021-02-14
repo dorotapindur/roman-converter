@@ -6,16 +6,16 @@ class RomanConverter extends React.Component {
         roman: null,
     }
     handleChange = (event) => {
-        const arabic = event.target.value;
+        const arabic = Math.round(event.target.value);
        
         this.setState({roman: toRoman(arabic)});
     }
     render() {
         return (
-            <>
-            <label>Arabic:<input onChange={this.handleChange} type="number"></input></label>
-            <p>Roman: {this.state.roman ? this.state.roman : 'none'}</p>
-            </>
+            <div className="wrapper">
+                <label>Arabic: <input className="input" onChange={this.handleChange} type="number"></input></label>
+                <p>Roman: {this.state.roman ? this.state.roman : 'none'}</p>
+            </div>
         )
     }
 }

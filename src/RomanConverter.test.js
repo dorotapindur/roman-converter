@@ -36,5 +36,12 @@ describe('<RomanConcerter />', () => {
         }).not.toThrow();
     });
 
+    it('converts 3,4 to III', () => {
+        const { getByText, getByLabelText } = render(<RomanConverter />);
+        fireEvent.change(getByLabelText(/arabic/i), { target: { value: '3.4'}});
+        expect(() => {
+            getByText("Roman: III")
+        }).not.toThrow();
+    });
 
 })

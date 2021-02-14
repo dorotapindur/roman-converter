@@ -1,3 +1,10 @@
 .App {
   text-align: center;
 }
+.wrapper {
+  width: max-content;
+  margin: 30px auto;
+}
+.input {
+  width: 60px;
+}
